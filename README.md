@@ -3,7 +3,9 @@
 使用字典的嵌套，在玩家进行输入指令时，（根据获取的键）调用键值，输出房间的信息。
 ## 玩家信息初始化`player`
 `now_room`首先用来初始化角色所处位置，之后用`move_player`修改键值，用来记录角色位置，调用`rooms`的键值。
-	`bag`设置空字典，初始化背包为空，之后可根据`take_item`将`rooms`中的`tjings`传入，在调用`inventory`打印出来。
+`bag`设置空字典，初始化背包为空，之后可根据`take_item`将`rooms`中的`tjings`传入，在调用`inventory`打印出来。
+## help模块
+`from help import helps`引入函数，`or help in range(len(helps_list)):`循环打印。
 ## 玩家移动模块
 `time_room`获取玩家当前位置，方便后续代码书写，`if direction in time_room["way"]:`通过字典内的值，判断方向是否可行，并防止玩家直接输入`down`直接通关，若是可行，更新玩家位置并打印新房间描述，若不可行，打印没有路。
 ## 拾取装备模块`take_item`
